@@ -2,8 +2,11 @@
   "name": "react-xml",
   "version": "0.1.0",
   "description": "",
+  "license": "MIT",
+  "author": "Daniel Nalborczyk",
   "main": "dist/bundle.cjs.js",
   "module": "dist/bundle.esm.js",
+  "sideEffects": false,
   "scripts": {
     "build": "rollup -c",
     "lint": "eslint .",
@@ -11,9 +14,28 @@
     "test": "jest",
     "test:cov": "jest --coverage"
   },
-  "keywords": [],
-  "author": "",
-  "license": "MIT",
+  "keywords": [
+    "react",
+    "xml"
+  ],
+  "engines": {
+    "node": ">=8.0.0"
+  },
+  "files": [
+    "bundle.cjs.js",
+    "bundle.esm.js",
+    "LICENSE",
+    "README.md",
+    "package.json"
+  ],
+  "homepage": "https://github.com/dnalborczyk/react-xml",
+  "bugs": {
+    "url": "https://github.com/dnalborczyk/react-xml/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dnalborczyk/react-xml.git"
+  },
   "devDependencies": {
     "babel-eslint": "^10.0.2",
     "eslint": "^6.0.1",
