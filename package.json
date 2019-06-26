@@ -11,7 +11,7 @@
     "build": "rollup -c",
     "lint": "eslint .",
     "prepare": "npm run build",
-    "test": "jest",
+    "test": "jest --verbose",
     "test:cov": "jest --coverage"
   },
   "keywords": [
