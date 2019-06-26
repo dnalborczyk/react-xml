@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`stringifyAttributes tests should throw with unsupported property types should throw exception with property type Array 1`] = `"Unsupported type: object. Only bigint, boolean, number and string are supported."`;
+
+exports[`stringifyAttributes tests should throw with unsupported property types should throw exception with property type Object 1`] = `"Unsupported type: object. Only bigint, boolean, number and string are supported."`;
+
+exports[`stringifyAttributes tests should throw with unsupported property types should throw exception with property type Promise 1`] = `"Unsupported type: object. Only bigint, boolean, number and string are supported."`;
+
+exports[`stringifyAttributes tests should throw with unsupported property types should throw exception with property type Symbol 1`] = `"Unsupported type: symbol. Only bigint, boolean, number and string are supported."`;
