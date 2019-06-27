@@ -5,6 +5,8 @@
 [libs]
 
 [lints]
+all=error
+unclear-type=off
 
 [options]
 
