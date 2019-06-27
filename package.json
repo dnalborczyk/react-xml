@@ -25,9 +25,12 @@
   "files": [
     "bundle.cjs.js",
     "bundle.esm.js",
+    "package.json",
     "LICENSE",
     "README.md",
-    "package.json"
+    "src/index.js",
+    "src/isPrimitive.js",
+    "src/stringifyAttributes.js"
   ],
   "homepage": "https://github.com/dnalborczyk/react-xml",
   "bugs": {
