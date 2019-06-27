@@ -9,6 +9,7 @@
   "sideEffects": false,
   "scripts": {
     "build": "rollup -c",
+    "flow": "flow",
     "lint": "eslint .",
     "prepare": "npm run build",
     "test": "jest --verbose",
@@ -45,8 +46,10 @@
     "eslint": "^6.0.1",
     "eslint-config-airbnb-base": "^13.1.0",
     "eslint-config-prettier": "^6.0.0",
+    "eslint-plugin-flowtype": "^3.11.1",
     "eslint-plugin-import": "^2.18.0",
     "eslint-plugin-prettier": "^3.1.0",
+    "flow-bin": "^0.102.0",
     "husky": "^2.5.0",
     "jest": "^24.8.0",
     "prettier": "^1.18.2",
