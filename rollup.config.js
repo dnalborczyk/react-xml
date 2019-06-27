@@ -1,4 +1,5 @@
 import babel from 'rollup-plugin-babel'
+import flowEntry from 'rollup-plugin-flow-entry'
 import { sizeSnapshot } from 'rollup-plugin-size-snapshot'
 
 const input = 'src/index.js'
@@ -12,7 +13,7 @@ export default [
       format: 'cjs',
       preferConst,
     },
-    plugins: [babel(), sizeSnapshot()],
+    plugins: [babel(), flowEntry(), sizeSnapshot()],
   },
   {
     input,
@@ -21,6 +22,6 @@ export default [
       format: 'esm',
       preferConst,
     },
-    plugins: [babel(), sizeSnapshot()],
+    plugins: [babel(), flowEntry(), sizeSnapshot()],
   },
 ]
