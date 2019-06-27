@@ -1,5 +1,4 @@
-// eslint-disable-next-line import/prefer-default-export
-export function isPrimitive(value) {
+export default function isPrimitive(value) {
   switch (typeof value) {
     case 'bigint':
     case 'boolean':

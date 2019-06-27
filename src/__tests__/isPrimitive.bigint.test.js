@@ -1,4 +1,4 @@
-import { isPrimitive } from '../utils.js'
+import isPrimitive from '../isPrimitive.js'
 
 // NOTE: bigint tests can be merged with utils.test.js file once
 // node.js v8.x support drops

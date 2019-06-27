@@ -1,4 +1,4 @@
-import { isPrimitive } from '../utils.js'
+import isPrimitive from '../isPrimitive.js'
 
 describe('utils tests', () => {
   describe('isPrimitive tests', () => {

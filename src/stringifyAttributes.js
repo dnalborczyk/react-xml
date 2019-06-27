@@ -1,4 +1,4 @@
-import { isPrimitive } from './utils.js'
+import isPrimitive from './isPrimitive.js'
 
 const { entries } = Object
 
