@@ -2,12 +2,21 @@ import babel from 'rollup-plugin-babel'
 import flowEntry from 'rollup-plugin-flow-entry'
 import { sizeSnapshot } from 'rollup-plugin-size-snapshot'
 
-const input = 'src/index.js'
+const options = {
+  // external dependencies:
+  // if we don't specify, rollup gives an 'unresolved' warning
+  external: [
+    // 3rd party
+    'react-is',
+  ],
+  input: 'src/index.js',
+}
+
 const preferConst = true
 
 export default [
   {
-    input,
+    ...options,
     output: {
       file: 'dist/bundle.cjs.js',
       format: 'cjs',
@@ -16,7 +25,7 @@ export default [
     plugins: [babel(), flowEntry(), sizeSnapshot()],
   },
   {
-    input,
+    ...options,
     output: {
       file: 'dist/bundle.esm.js',
       format: 'esm',
