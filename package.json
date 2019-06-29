@@ -30,6 +30,9 @@
     "README.md",
     "src/index.js",
     "src/isPrimitive.js",
+    "src/render.js",
+    "src/renderToStatic.js",
+    "src/renderToStaticXML.js",
     "src/stringifyAttributes.js"
   ],
   "homepage": "https://github.com/dnalborczyk/react-xml",
