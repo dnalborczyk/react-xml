@@ -8,7 +8,7 @@ module.exports = {
     'eslint-config-prettier',
   ],
 
-  plugins: ['prettier'],
+  plugins: ['prettier', 'react'],
 
   // http://eslint.org/docs/user-guide/configuring#specifying-parser
   // enables additional future ECMA language features https://github.com/tc39/proposals
@@ -22,9 +22,18 @@ module.exports = {
     jest: true,
   },
 
+  settings: {
+    react: {
+      version: 'detect',
+    },
+  },
+
   rules: {
     // overwrite
     // require file extensions
     'import/extensions': ['error', 'always', { ignorePackages: true }],
+
+    'react/jsx-uses-react': 'error',
+    'react/jsx-uses-vars': 'error',
   },
 }
