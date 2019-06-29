@@ -1,17 +1,17 @@
 import stringifyAttributes from '../stringifyAttributes.js'
 
-describe('stringifyAttributes tests', () => {
+describe('stringifyAttributes', () => {
   describe('should work with supported property types', () => {
     test.each`
-      param                       | expected               | type
-      ${{}}                       | ${''}                  | ${'empty Object'}
-      ${{ foo: 1 }}               | ${'foo="1"'}           | ${'Object with number property'}
-      ${{ foo: 'bar' }}           | ${'foo="bar"'}         | ${'Object with string property'}
-      ${{ foo: '' }}              | ${'foo=""'}            | ${'Object with empty string property'}
-      ${{ foo: null }}            | ${''}                  | ${'Object with null property'}
-      ${{ foo: undefined }}       | ${''}                  | ${'Object with undefined property'}
-      ${{ foo: '0', bar: 'foo' }} | ${'foo="0" bar="foo"'} | ${'Object with multiple properties'}
-    `('should return $expected when $type is passed', ({ param, expected }) => {
+      param                       | expected               | description
+      ${{}}                       | ${''}                  | ${'empty'}
+      ${{ foo: 1 }}               | ${'foo="1"'}           | ${'number property'}
+      ${{ foo: 'bar' }}           | ${'foo="bar"'}         | ${'string property'}
+      ${{ foo: '' }}              | ${'foo=""'}            | ${'empty string property'}
+      ${{ foo: null }}            | ${''}                  | ${'null property'}
+      ${{ foo: undefined }}       | ${''}                  | ${'undefined property'}
+      ${{ foo: '0', bar: 'foo' }} | ${'foo="0" bar="foo"'} | ${'multiple properties'}
+    `(`should return '$expected' with $description`, ({ param, expected }) => {
       const result = stringifyAttributes(param)
       expect(result).toEqual(expected)
     })
@@ -19,12 +19,12 @@ describe('stringifyAttributes tests', () => {
 
   describe('should throw with unsupported property types', () => {
     test.each`
-      param                         | type
+      param                         | description
       ${{ foo: [] }}                | ${'Array'}
       ${{ foo: {} }}                | ${'Object'}
       ${{ foo: Promise.resolve() }} | ${'Promise'}
       ${{ foo: Symbol('') }}        | ${'Symbol'}
-    `('should throw exception with property type $type', ({ param }) => {
+    `('should throw exception with property type $description', ({ param }) => {
       expect(() => stringifyAttributes(param)).toThrowErrorMatchingSnapshot()
     })
   })

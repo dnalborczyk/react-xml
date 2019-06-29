@@ -1,8 +1,8 @@
 import isPrimitive from '../isPrimitive.js'
 
-describe('isPrimitive tests', () => {
+describe('isPrimitive', () => {
   test.each`
-    param                | expected | type
+    param                | expected | description
     ${true}              | ${true}  | ${'Boolean'}
     ${0}                 | ${true}  | ${'Number'}
     ${''}                | ${true}  | ${'String'}
@@ -12,8 +12,11 @@ describe('isPrimitive tests', () => {
     ${Symbol('')}        | ${false} | ${'Symbol'}
     ${null}              | ${false} | ${'null'}
     ${undefined}         | ${false} | ${'undefined'}
-  `('should return $expected when $type is passed', ({ param, expected }) => {
-    const result = isPrimitive(param)
-    expect(result).toEqual(expected)
-  })
+  `(
+    'should return $expected when $description is passed',
+    ({ param, expected }) => {
+      const result = isPrimitive(param)
+      expect(result).toEqual(expected)
+    },
+  )
 })
