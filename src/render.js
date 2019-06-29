@@ -53,22 +53,15 @@ export default function render(
     }${attributes}>`,
   )
 
-  let strChildren
+  const strChildren = isArray(children)
+    ? children.map((item) => render(item, indent + INDENTATION))
+    : [render(children, indent + INDENTATION)]
 
-  if (!isArray(children)) {
-    strChildren = [render(children, indent + INDENTATION)]
-    // the array could be empty if it was a value for the jsx element
-  } else if (children.length > 0) {
-    strChildren = children.map((item) => render(item, indent + INDENTATION))
-  }
-
-  if (strChildren) {
-    str.push(...strChildren)
-    // if we have children, we also have a new line
-    // except for empty string
-    if (strChildren[0] !== '') {
-      str.push(`\n${indentation}`)
-    }
+  str.push(...strChildren)
+  // if we have children, we also have a new line
+  // except for empty string
+  if (strChildren[0] !== '') {
+    str.push(`\n${indentation}`)
   }
 
   str.push(`</${name}>`)
