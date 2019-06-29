@@ -1,3 +1,3 @@
 // @flow strict
 
-export default 'dummy'
+export { default } from './renderToStaticXML.js'
