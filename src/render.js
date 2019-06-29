@@ -42,7 +42,7 @@ export default function render(
   const name = typeof type === 'function' ? type(props).type : type
 
   // children -> elements, everything else are attributes
-  const { children, ...rest } = props || {}
+  const { children, ...rest } = props
   const attributes = stringifyAttributes(rest)
 
   const str = [indent === 0 ? '' : `\n`]
