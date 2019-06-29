@@ -40,6 +40,9 @@
     "type": "git",
     "url": "https://github.com/dnalborczyk/react-xml.git"
   },
+  "dependencies": {
+    "react-is": "^16.8.6"
+  },
   "devDependencies": {
     "@babel/core": "^7.4.5",
     "@babel/plugin-syntax-bigint": "^7.4.4",
