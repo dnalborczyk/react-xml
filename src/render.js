@@ -36,10 +36,18 @@ export default function render(
     )
   }
 
-  const { props, type } = value
+  let { props } = value
+  const { type } = value
 
   // element or function component?
-  const name = typeof type === 'function' ? type(props).type : type
+  let name
+
+  if (typeof type === 'function') {
+    const element = type(props)
+    ;({ type: name, props } = element)
+  } else {
+    name = type
+  }
 
   // children -> elements, everything else are attributes
   const { children, ...rest } = props
