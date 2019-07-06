@@ -29,7 +29,7 @@ export default function render(
   }
 
   // at this point we excluded null, undefined and any primitives
-  // so if it's not an react element, we throw
+  // so if it's not a react element, we throw
   if (!isElement(value)) {
     throw new Error(
       `Unsupported type: ${typeof value}. Only bigint, boolean, number and string are supported.`,
@@ -66,6 +66,7 @@ export default function render(
     : [render(children, indent + INDENTATION)]
 
   str.push(...strChildren)
+
   // if we have children, we also have a new line
   // except for empty string
   if (strChildren[0] !== '') {
