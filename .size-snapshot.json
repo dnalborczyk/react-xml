@@ -1,11 +1,11 @@
 {
   "dist/bundle.cjs.js": {
-    "bundled": 2527,
+    "bundled": 2526,
     "minified": 1354,
     "gzipped": 671
   },
   "dist/bundle.esm.js": {
-    "bundled": 2510,
+    "bundled": 2509,
     "minified": 1340,
     "gzipped": 662,
     "treeshaked": {
