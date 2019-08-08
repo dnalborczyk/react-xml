@@ -5,7 +5,7 @@ module.exports = {
     'eslint:recommended',
     'plugin:flowtype/recommended',
     'eslint-config-airbnb-base',
-    'eslint-config-prettier',
+    'plugin:prettier/recommended',
   ],
 
   plugins: ['prettier', 'react'],
