@@ -52,6 +52,16 @@ export default function render(
   // children -> elements, everything else are attributes
   const { children, ...rest } = props
   const attributes = stringifyAttributes(rest)
+  const isFragment = name === Symbol.for('react.fragment')
+  const childIndent = isFragment ? indent : indent + INDENTATION
+
+  const strChildren = isArray(children)
+    ? children.map((item) => render(item, childIndent))
+    : [render(children, childIndent)]
+
+  if (isFragment) {
+    return strChildren
+  }
 
   const str = [indent === 0 ? '' : `\n`]
 
@@ -60,10 +70,6 @@ export default function render(
       attributes.length === 0 ? '' : ' '
     }${attributes}>`,
   )
-
-  const strChildren = isArray(children)
-    ? children.map((item) => render(item, indent + INDENTATION))
-    : [render(children, indent + INDENTATION)]
 
   str.push(...strChildren)
 
