@@ -1,12 +1,8 @@
-// @flow strict
-
 import isPrimitive from './isPrimitive.js'
 
 const { entries } = Object
 
-export default function stringifyAttributes(obj: {
-  [key: string]: mixed,
-}): string {
+export default function stringifyAttributes(obj) {
   return entries(obj)
     .filter(([, value]) => value != null)
     .map(([key, value]) => {

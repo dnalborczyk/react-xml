@@ -1,7 +1,4 @@
-// @flow strict
-
 import * as ReactIs from 'react-is'
-import { type Element } from 'react'
 import isPrimitive from './isPrimitive.js'
 import stringifyAttributes from './stringifyAttributes.js'
 
@@ -10,13 +7,7 @@ const { isElement } = ReactIs
 
 const INDENTATION = 2
 
-// $FlowFixMe bigint not yet supported by flow as of v0.102
-type Primitive = bigint | boolean | number | string
-
-export default function render(
-  value: Primitive | Element<any>,
-  indent: number,
-): string {
+export default function render(value, indent) {
   const indentation = ' '.repeat(indent)
 
   // for null and undefined we just return an empty string

@@ -3,7 +3,6 @@
 module.exports = {
   extends: [
     'eslint:recommended',
-    'plugin:flowtype/recommended',
     'eslint-config-airbnb-base',
     'plugin:prettier/recommended',
   ],
@@ -14,7 +13,6 @@ module.exports = {
   // enables additional future ECMA language features https://github.com/tc39/proposals
   // e.g.:
   // jsx http://facebook.github.io/jsx/
-  // flow types https://flowtype.org/
   parser: 'babel-eslint',
 
   env: {
