@@ -46,12 +46,12 @@
     "react-is": "^16.12.0"
   },
   "devDependencies": {
-    "@babel/core": "^7.7.5",
+    "@babel/core": "^7.7.7",
     "@babel/plugin-syntax-bigint": "^7.7.4",
     "@babel/plugin-transform-modules-commonjs": "^7.7.5",
-    "@babel/plugin-transform-react-jsx": "^7.7.4",
+    "@babel/plugin-transform-react-jsx": "^7.7.7",
     "babel-eslint": "^10.0.3",
-    "eslint": "^6.7.2",
+    "eslint": "^6.8.0",
     "eslint-config-airbnb-base": "^14.0.0",
     "eslint-config-prettier": "^6.7.0",
     "eslint-plugin-import": "^2.19.1",
@@ -61,7 +61,7 @@
     "jest": "^24.9.0",
     "prettier": "^1.19.1",
     "react": "^16.12.0",
-    "semver": "^7.0.0"
+    "semver": "^7.1.1"
   },
   "peerDependencies": {
     "react": ">=16.0.0"
