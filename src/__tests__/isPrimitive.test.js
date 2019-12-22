@@ -5,6 +5,7 @@ describe('isPrimitive', () => {
     param                | expected | description
     ${true}              | ${true}  | ${'Boolean'}
     ${0}                 | ${true}  | ${'Number'}
+    ${1n}                | ${true}  | ${'BigInt'}
     ${''}                | ${true}  | ${'String'}
     ${[]}                | ${false} | ${'Array'}
     ${{}}                | ${false} | ${'Object'}

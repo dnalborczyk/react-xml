@@ -6,6 +6,7 @@ describe('stringifyAttributes', () => {
       param                       | expected               | description
       ${{}}                       | ${''}                  | ${'empty'}
       ${{ foo: 1 }}               | ${'foo="1"'}           | ${'number property'}
+      ${{ foo: 1n }}              | ${'foo="1"'}           | ${'Object with bigint property'}
       ${{ foo: 'bar' }}           | ${'foo="bar"'}         | ${'string property'}
       ${{ foo: '' }}              | ${'foo=""'}            | ${'empty string property'}
       ${{ foo: null }}            | ${''}                  | ${'null property'}
