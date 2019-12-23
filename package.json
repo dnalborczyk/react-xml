@@ -4,11 +4,10 @@
   "description": "",
   "license": "MIT",
   "author": "Daniel Nalborczyk",
-  "main": "dist/bundle.cjs.js",
-  "module": "dist/bundle.esm.js",
+  "main": "dist/index.js",
   "sideEffects": false,
   "scripts": {
-    "build": "tsc",
+    "build": "rimraf dist && tsc",
     "lint": "eslint .",
     "prepare": "npm run build",
     "test": "jest --verbose",
@@ -22,17 +21,10 @@
     "node": ">=10.13.0"
   },
   "files": [
-    "bundle.cjs.js",
-    "bundle.esm.js",
     "package.json",
     "LICENSE",
     "README.md",
-    "src/index.js",
-    "src/isPrimitive.js",
-    "src/render.js",
-    "src/renderToStatic.js",
-    "src/renderToStaticXML.js",
-    "src/stringifyAttributes.js"
+    "dist/*"
   ],
   "homepage": "https://github.com/dnalborczyk/react-xml",
   "bugs": {
@@ -58,6 +50,7 @@
     "jest": "^24.9.0",
     "prettier": "^1.19.1",
     "react": "^16.12.0",
+    "rimraf": "^3.0.0",
     "ts-jest": "^24.2.0",
     "typescript": "^3.7.4"
   },
