@@ -1,3 +1,9 @@
 'use strict' // eslint-disable-line
 
-module.exports = {}
+module.exports = {
+  moduleFileExtensions: ['ts', 'js'],
+  transform: {
+    '^.+\\.(js|ts)?$': 'ts-jest',
+  },
+  transformIgnorePatterns: ['/node_modules/'],
+}

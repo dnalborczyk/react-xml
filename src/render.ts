@@ -1,13 +1,13 @@
 import * as ReactIs from 'react-is'
-import isPrimitive from './isPrimitive.js'
-import stringifyAttributes from './stringifyAttributes.js'
+import isPrimitive from './isPrimitive'
+import stringifyAttributes from './stringifyAttributes'
 
 const { isArray } = Array
 const { isElement } = ReactIs
 
 const INDENTATION = 2
 
-export default function render(value, indent) {
+export default function render(value: any, indent: number) {
   const indentation = ' '.repeat(indent)
 
   // for null and undefined we just return an empty string
@@ -34,6 +34,7 @@ export default function render(value, indent) {
   let name
 
   if (typeof type === 'function') {
+    // @ts-ignore
     const element = type(props)
     ;({ type: name, props } = element)
   } else {

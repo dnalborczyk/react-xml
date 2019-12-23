@@ -1,4 +1,4 @@
-export default function isPrimitive(value) {
+export default function isPrimitive(value: any) {
   return (
     typeof value === 'bigint' ||
     typeof value === 'boolean' ||

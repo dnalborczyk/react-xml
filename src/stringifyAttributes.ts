@@ -1,8 +1,8 @@
-import isPrimitive from './isPrimitive.js'
+import isPrimitive from './isPrimitive'
 
 const { entries } = Object
 
-export default function stringifyAttributes(obj) {
+export default function stringifyAttributes(obj: any) {
   return entries(obj)
     .filter(([, value]) => value != null)
     .map(([key, value]) => {

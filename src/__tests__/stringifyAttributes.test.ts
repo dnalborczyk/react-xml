@@ -1,4 +1,6 @@
-import stringifyAttributes from '../stringifyAttributes.js'
+// @ts-nocheck
+
+import stringifyAttributes from '../stringifyAttributes'
 
 describe('stringifyAttributes', () => {
   describe('should work with supported property types', () => {

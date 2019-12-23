@@ -1,4 +1,6 @@
-import isPrimitive from '../isPrimitive.js'
+// @ts-nocheck
+
+import isPrimitive from '../isPrimitive'
 
 describe('isPrimitive', () => {
   test.each`
