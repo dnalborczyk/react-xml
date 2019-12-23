@@ -7,7 +7,7 @@ const { isElement } = ReactIs
 
 const INDENTATION = 2
 
-export default function render(value: any, indent: number) {
+export default function render(value: any, indent: number): string {
   const indentation = ' '.repeat(indent)
 
   // for null and undefined we just return an empty string

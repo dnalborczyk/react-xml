@@ -2,7 +2,7 @@ import isPrimitive from './isPrimitive'
 
 const { entries } = Object
 
-export default function stringifyAttributes(obj: any) {
+export default function stringifyAttributes(obj: any): string {
   return entries(obj)
     .filter(([, value]) => value != null)
     .map(([key, value]) => {
