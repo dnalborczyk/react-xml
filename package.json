@@ -10,6 +10,7 @@
     "build": "rimraf dist && tsc",
     "lint": "eslint .",
     "prepare": "npm run build",
+    "prepublishOnly": "npm run lint && npm run build && npm test",
     "test": "jest --verbose",
     "test:cov": "jest --coverage"
   },
